@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E216819321993B210025B547 /* RotatingWheelController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RotatingWheelController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E216819321993B210025B547 /* Wheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wheel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E216819621993B210025B547 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E216819821993B210025B547 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E216819B21993B210025B547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 		E216819421993B210025B547 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E216819321993B210025B547 /* RotatingWheelController.app */,
+				E216819321993B210025B547 /* Wheel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,12 +67,12 @@
 		E216819521993B210025B547 /* RotatingWheelController */ = {
 			isa = PBXGroup;
 			children = (
-				E216819621993B210025B547 /* AppDelegate.swift */,
-				E216819821993B210025B547 /* ViewController.swift */,
 				E216819A21993B210025B547 /* Main.storyboard */,
-				E216819D21993B210025B547 /* Assets.xcassets */,
+				E216819821993B210025B547 /* ViewController.swift */,
 				E216819F21993B210025B547 /* LaunchScreen.storyboard */,
 				E21681A221993B210025B547 /* Info.plist */,
+				E216819621993B210025B547 /* AppDelegate.swift */,
+				E216819D21993B210025B547 /* Assets.xcassets */,
 			);
 			path = RotatingWheelController;
 			sourceTree = "<group>";
@@ -102,7 +102,7 @@
 			);
 			name = RotatingWheelController;
 			productName = RotatingWheelController;
-			productReference = E216819321993B210025B547 /* RotatingWheelController.app */;
+			productReference = E216819321993B210025B547 /* Wheel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -117,6 +117,7 @@
 				TargetAttributes = {
 					E216819221993B210025B547 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -307,15 +308,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3Y63MCQ957;
+				DEVELOPMENT_TEAM = QM5YA25N6F;
 				INFOPLIST_FILE = RotatingWheelController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.msbit.RotatingWheelController;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dmytroprudnikov.wheel;
+				PRODUCT_NAME = Wheel;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -325,15 +327,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3Y63MCQ957;
+				DEVELOPMENT_TEAM = QM5YA25N6F;
 				INFOPLIST_FILE = RotatingWheelController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.msbit.RotatingWheelController;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dmytroprudnikov.wheel;
+				PRODUCT_NAME = Wheel;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

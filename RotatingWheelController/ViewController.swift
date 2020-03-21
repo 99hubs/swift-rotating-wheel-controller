@@ -10,24 +10,41 @@ import os
 import UIKit
 
 class ViewController: UIViewController {
+	
+	
+	
+	
+	@IBOutlet weak var daysLabel: UILabel!
+	@IBOutlet weak var wheelContainer: UIView!
+	@IBOutlet weak var moreDaysButton: UIButton!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-        let wheel = SMRotaryWheel(frame: view.frame, delegate: self, numberOfSections: 3)
-        view.addSubview(wheel)
+		
+		let wheel = SMRotaryWheel(frame: CGRect(x: 0, y: 0, width: wheelContainer.bounds.width, height: wheelContainer.bounds.height), delegate: self, numberOfSections: 24)
+        
+		// Put it in the wheel container
+		wheelContainer.addSubview(wheel)
+		
+		
+		
     }
 }
 
 extension ViewController : SMRotaryProtocol {
-    func viewFor(tag: Int) -> UIView {
-        let view = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
-        view.backgroundColor = .red
-        view.tag = tag
-        view.text = "\(tag)"
+	func viewFor(tag: Int, minimumValue: Int, multiplier: Int) -> UIView {
+        let view = UILabel(frame: CGRect(x: 0, y: 0, width: wheelContainer.bounds.width/2-14, height: 40))
+        view.tag = tag + minimumValue
+        view.text = "\(tag + minimumValue)"
+		view.font = view.font.withSize(12)
+		view.textColor = UIColor(named: "blackBackground")
         return view
     }
 
     func wheelDidChangeValue(to: Int) {
-        print("\(to)")
+		daysLabel.text = "\(to) days"
+		
+		//moreDaysButton.frame.origin.y+=10
     }
 }
 
